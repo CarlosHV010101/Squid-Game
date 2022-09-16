@@ -10,6 +10,7 @@ import Foundation
 final class PlayersListViewModel: ObservableObject {
     
     @Published var players: [Player]
+    @Published var goToGame: Bool = false
     
     init(players: [Player]) {
         self.players = players

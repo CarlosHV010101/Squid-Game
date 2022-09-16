@@ -11,7 +11,7 @@ class Player {
     
     let id: UUID = UUID()
     let name: String
-    var isAlive: Bool = true
+    var isDead: Bool = false
     var currentSelection: GlassPanel?
     
     init(name: String) {

@@ -21,6 +21,13 @@
 		04E0392B28D4162A000672FA /* PlayersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0392A28D4162A000672FA /* PlayersListViewModel.swift */; };
 		04E0392D28D41D49000672FA /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0392C28D41D49000672FA /* GameViewModel.swift */; };
 		04E0393028D41D92000672FA /* GlassPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0392F28D41D92000672FA /* GlassPanel.swift */; };
+		04E0393228D4F105000672FA /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0393128D4F105000672FA /* GameView.swift */; };
+		04E0393528D4F140000672FA /* GameToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0393428D4F140000672FA /* GameToolBarView.swift */; };
+		04E0393928D4F2A0000672FA /* CurrentPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0393828D4F2A0000672FA /* CurrentPlayerView.swift */; };
+		04E0393B28D4F3B9000672FA /* GameOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0393A28D4F3B9000672FA /* GameOptionsView.swift */; };
+		04E0393D28D4F4B4000672FA /* GlassPanelButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0393C28D4F4B4000672FA /* GlassPanelButtonView.swift */; };
+		04E0393F28D50ED5000672FA /* GameMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0393E28D50ED5000672FA /* GameMapView.swift */; };
+		04E0394128D50FEB000672FA /* GlassPanelPairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0394028D50FEB000672FA /* GlassPanelPairView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +46,13 @@
 		04E0392A28D4162A000672FA /* PlayersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersListViewModel.swift; sourceTree = "<group>"; };
 		04E0392C28D41D49000672FA /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		04E0392F28D41D92000672FA /* GlassPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassPanel.swift; sourceTree = "<group>"; };
+		04E0393128D4F105000672FA /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		04E0393428D4F140000672FA /* GameToolBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameToolBarView.swift; sourceTree = "<group>"; };
+		04E0393828D4F2A0000672FA /* CurrentPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPlayerView.swift; sourceTree = "<group>"; };
+		04E0393A28D4F3B9000672FA /* GameOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOptionsView.swift; sourceTree = "<group>"; };
+		04E0393C28D4F4B4000672FA /* GlassPanelButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassPanelButtonView.swift; sourceTree = "<group>"; };
+		04E0393E28D50ED5000672FA /* GameMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMapView.swift; sourceTree = "<group>"; };
+		04E0394028D50FEB000672FA /* GlassPanelPairView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassPanelPairView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +107,8 @@
 		048863CF28D403E80076B21D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04E0393728D4F280000672FA /* Game */,
+				04E0393328D4F131000672FA /* ToolBar */,
 				04E0392528D40E83000672FA /* PlayerView */,
 				04E0392228D40BE4000672FA /* Buttons */,
 				048863DA28D4097F0076B21D /* TextFields */,
@@ -133,6 +149,7 @@
 				048863D328D404480076B21D /* MainView.swift */,
 				048863C328D402FD0076B21D /* ContentView.swift */,
 				04E0392828D415C6000672FA /* PlayersListView.swift */,
+				04E0393128D4F105000672FA /* GameView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -167,6 +184,26 @@
 				04E0392F28D41D92000672FA /* GlassPanel.swift */,
 			);
 			path = Enumerations;
+			sourceTree = "<group>";
+		};
+		04E0393328D4F131000672FA /* ToolBar */ = {
+			isa = PBXGroup;
+			children = (
+				04E0393428D4F140000672FA /* GameToolBarView.swift */,
+			);
+			path = ToolBar;
+			sourceTree = "<group>";
+		};
+		04E0393728D4F280000672FA /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				04E0393E28D50ED5000672FA /* GameMapView.swift */,
+				04E0393828D4F2A0000672FA /* CurrentPlayerView.swift */,
+				04E0393A28D4F3B9000672FA /* GameOptionsView.swift */,
+				04E0393C28D4F4B4000672FA /* GlassPanelButtonView.swift */,
+				04E0394028D50FEB000672FA /* GlassPanelPairView.swift */,
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,15 +278,22 @@
 			files = (
 				048863C428D402FD0076B21D /* ContentView.swift in Sources */,
 				048863D428D404480076B21D /* MainView.swift in Sources */,
+				04E0393B28D4F3B9000672FA /* GameOptionsView.swift in Sources */,
 				04E0392128D40A3D000672FA /* CustomTextField.swift in Sources */,
 				04E0392D28D41D49000672FA /* GameViewModel.swift in Sources */,
+				04E0393928D4F2A0000672FA /* CurrentPlayerView.swift in Sources */,
 				04E0392B28D4162A000672FA /* PlayersListViewModel.swift in Sources */,
 				04E0392928D415C6000672FA /* PlayersListView.swift in Sources */,
 				04E0392728D40E96000672FA /* PlayerView.swift in Sources */,
 				04E0393028D41D92000672FA /* GlassPanel.swift in Sources */,
+				04E0393F28D50ED5000672FA /* GameMapView.swift in Sources */,
 				048863C228D402FD0076B21D /* Squid_GameApp.swift in Sources */,
+				04E0394128D50FEB000672FA /* GlassPanelPairView.swift in Sources */,
 				04E0392428D40BF5000672FA /* PrimaryButton.swift in Sources */,
+				04E0393D28D4F4B4000672FA /* GlassPanelButtonView.swift in Sources */,
+				04E0393528D4F140000672FA /* GameToolBarView.swift in Sources */,
 				048863D828D405070076B21D /* Player.swift in Sources */,
+				04E0393228D4F105000672FA /* GameView.swift in Sources */,
 				048863D628D404D00076B21D /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

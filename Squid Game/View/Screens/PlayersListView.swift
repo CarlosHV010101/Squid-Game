@@ -16,39 +16,56 @@ struct PlayersListView: View {
     }
     
     var body: some View {
-        VStack {
-            
-            Text("Orden de los jugadores")
-                .font(.title)
-                .bold()
-                .foregroundColor(.white)
-            
-            ScrollView {
+        NavigationView {
+            VStack {
                 
-                VStack(alignment: .leading, spacing: 20) {
+                Text("Orden de los jugadores")
+                    .font(.title)
+                    .bold()
+                    .foregroundColor(.white)
+                
+                ScrollView {
                     
-                    ForEach(0..<$viewModel.players.count) { index in
+                    VStack(alignment: .leading, spacing: 20) {
                         
-                        HStack {
-                                                                        
-                            Text("\(index + 1).")
-                                .bold()
+                        ForEach(0..<$viewModel.players.count, id: \.self) { index in
                             
-                            Text(viewModel.players[index].name)
-                                .bold()
+                            HStack {
+                                                                            
+                                Text("\(index + 1).")
+                                    .bold()
+                                
+                                Text(viewModel.players[index].name)
+                                    .bold()
+                                
+                                Spacer()
+                            }
                             
-                            Spacer()
                         }
-                        
                     }
+                    .padding(.leading, 30)
                 }
-                .padding(.leading, 30)
+                
+                PrimaryButton(text: "Iniciar partida", action: {
+                    viewModel.goToGame = true
+                })
+                
+                NavigationLink(
+                    destination: GameView(
+                        viewModel: GameViewModel(
+                            players: viewModel.players
+                        )
+                    )
+                    .navigationBarHidden(true),
+                    isActive: $viewModel.goToGame) {
+                        EmptyView()
+                    }
+                    .hidden()
             }
-            
-            PrimaryButton(text: "Iniciar partida", action: {})
+            .padding(.vertical, 30)
+            .background(Color.black)
+            .navigationBarHidden(true)
         }
-        .padding(.vertical, 30)
-        .background(Color.black)        
     }
 }
 

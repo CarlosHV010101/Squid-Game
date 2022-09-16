@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 final class GameViewModel: ObservableObject {
     @Published var glassPanels: [GlassPanel] = []
@@ -15,15 +16,17 @@ final class GameViewModel: ObservableObject {
     @Published var showWinnerModal: Bool = false
     @Published var showLoserModal: Bool = false
     @Published var winners: [Player] = []
+    @Published var showPlayerList: Bool = false
+    @Published var showGlassPanelOptions: Bool = true
     
     init(players: [Player]) {
         self.players = players
-        self.generateGlassPanels(with: players.count)
         self.setFirstPlayer()
+        self.generateGlassPanels(with: players.count)
     }
     
     private func generateGlassPanels(with numberOfPlayers: Int) {
-        for _ in 0..<numberOfPlayers * 3 {
+        for _ in 0..<numberOfPlayers * 2 {
             self.glassPanels.append(
                 GlassPanel.allCases.randomElement()!
             )
@@ -38,23 +41,26 @@ final class GameViewModel: ObservableObject {
         if currentPlayer != nil {
             self.currentPlayer!.currentSelection = selection
         }
-        
         self.validatePlayerSelection()
     }
     
     private func isValidSelection() -> Bool {
-        self.currentPlayer?.currentSelection == glassPanels[currentPanelIndex]
+        return self.currentPlayer?.currentSelection == glassPanels[currentPanelIndex]
     }
     
     private func validatePlayerSelection() {
-        
         if !isValidSelection() {
             self.killCurrentPlayer()
+            self.goToNextPlayer()
         }
         
         if shouldContinueGame() {
-            self.currentPanelIndex += 1
-            self.goToNextPlayer()
+            DispatchQueue.main.async {
+                withAnimation {
+                    self.currentPanelIndex += 1
+                    self.goToNextPlayer()
+                }
+            }
         }
     }
     
@@ -67,20 +73,25 @@ final class GameViewModel: ObservableObject {
             return
         }
         
-        self.players[currentPlayerIndex].isAlive = false
+        self.players[currentPlayerIndex].isDead = true
         self.currentPlayer = nil
     }
     
     private func shouldContinueGame() -> Bool {
         
-        if !players.allSatisfy({ $0.isAlive }) {
+        if players.allSatisfy({ $0.isDead }) {
             self.showLoserModal = true
+            self.showGlassPanelOptions = false
             return false
         }
         
-        if currentPanelIndex == glassPanels.count {
-            self.winners = players.filter { $0.isAlive }
+        if currentPanelIndex == glassPanels.count - 1 {
+            self.winners = players.filter { !$0.isDead }
             self.showWinnerModal = true
+            self.showGlassPanelOptions = false
+            winners.forEach { winner in
+                debugPrint("Winner", winner.name)
+            }
             return false
         }
         
@@ -88,6 +99,8 @@ final class GameViewModel: ObservableObject {
     }
     
     func goToNextPlayer() {
-        self.currentPlayer = players.first(where: { $0.isAlive })
+        self.currentPlayer = players.first(
+            where: { !$0.isDead }
+        )
     }
 }
