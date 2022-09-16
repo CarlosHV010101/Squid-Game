@@ -26,11 +26,12 @@ struct PlayersListView: View {
             ScrollView {
                 
                 VStack(alignment: .leading, spacing: 20) {
+                    
                     ForEach(0..<$viewModel.players.count) { index in
                         
                         HStack {
                                                                         
-                            Text(String(index + 1))
+                            Text("\(index + 1).")
                                 .bold()
                             
                             Text(viewModel.players[index].name)
@@ -43,6 +44,8 @@ struct PlayersListView: View {
                 }
                 .padding(.leading, 30)
             }
+            
+            PrimaryButton(text: "Iniciar partida", action: {})
         }
         .padding(.vertical, 30)
         .background(Color.black)        

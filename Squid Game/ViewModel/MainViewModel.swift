@@ -25,10 +25,9 @@ final class MainViewModel: ObservableObject {
         
         self.players.append(Player(name: playerName))
         self.playerName = ""
-        
     }
     
-    func startGame() {
+    func registerPlayers() {
         self.resetErrors()
         if players.count < 2 {
             self.showError = true

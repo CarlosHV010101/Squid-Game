@@ -60,7 +60,7 @@ struct MainView: View {
             
             PrimaryButton(
                 text: "Revolver jugadores",
-                action: viewModel.startGame
+                action: viewModel.registerPlayers
             )
             
             NavigationLink(

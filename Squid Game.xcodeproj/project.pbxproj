@@ -19,6 +19,8 @@
 		04E0392728D40E96000672FA /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0392628D40E96000672FA /* PlayerView.swift */; };
 		04E0392928D415C6000672FA /* PlayersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0392828D415C6000672FA /* PlayersListView.swift */; };
 		04E0392B28D4162A000672FA /* PlayersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0392A28D4162A000672FA /* PlayersListViewModel.swift */; };
+		04E0392D28D41D49000672FA /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0392C28D41D49000672FA /* GameViewModel.swift */; };
+		04E0393028D41D92000672FA /* GlassPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0392F28D41D92000672FA /* GlassPanel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		04E0392628D40E96000672FA /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		04E0392828D415C6000672FA /* PlayersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersListView.swift; sourceTree = "<group>"; };
 		04E0392A28D4162A000672FA /* PlayersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersListViewModel.swift; sourceTree = "<group>"; };
+		04E0392C28D41D49000672FA /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		04E0392F28D41D92000672FA /* GlassPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassPanel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 		048863C028D402FD0076B21D /* Squid Game */ = {
 			isa = PBXGroup;
 			children = (
+				04E0392E28D41D7D000672FA /* Enumerations */,
 				048863D228D4042E0076B21D /* App */,
 				048863D128D403FD0076B21D /* Model */,
 				048863D028D403F60076B21D /* ViewModel */,
@@ -101,6 +106,7 @@
 			children = (
 				048863D528D404D00076B21D /* MainViewModel.swift */,
 				04E0392A28D4162A000672FA /* PlayersListViewModel.swift */,
+				04E0392C28D41D49000672FA /* GameViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -153,6 +159,14 @@
 				04E0392628D40E96000672FA /* PlayerView.swift */,
 			);
 			path = PlayerView;
+			sourceTree = "<group>";
+		};
+		04E0392E28D41D7D000672FA /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				04E0392F28D41D92000672FA /* GlassPanel.swift */,
+			);
+			path = Enumerations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,9 +242,11 @@
 				048863C428D402FD0076B21D /* ContentView.swift in Sources */,
 				048863D428D404480076B21D /* MainView.swift in Sources */,
 				04E0392128D40A3D000672FA /* CustomTextField.swift in Sources */,
+				04E0392D28D41D49000672FA /* GameViewModel.swift in Sources */,
 				04E0392B28D4162A000672FA /* PlayersListViewModel.swift in Sources */,
 				04E0392928D415C6000672FA /* PlayersListView.swift in Sources */,
 				04E0392728D40E96000672FA /* PlayerView.swift in Sources */,
+				04E0393028D41D92000672FA /* GlassPanel.swift in Sources */,
 				048863C228D402FD0076B21D /* Squid_GameApp.swift in Sources */,
 				04E0392428D40BF5000672FA /* PrimaryButton.swift in Sources */,
 				048863D828D405070076B21D /* Player.swift in Sources */,
