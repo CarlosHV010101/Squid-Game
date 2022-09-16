@@ -2,7 +2,7 @@
 //  Squid_GameApp.swift
 //  Squid Game
 //
-//  Created by mac on 15/09/22.
+//  Created by Carlos Hernández on 15/09/22.
 //
 
 import SwiftUI
