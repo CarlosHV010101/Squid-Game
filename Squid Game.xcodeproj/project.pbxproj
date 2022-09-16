@@ -14,6 +14,9 @@
 		048863D428D404480076B21D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048863D328D404480076B21D /* MainView.swift */; };
 		048863D628D404D00076B21D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048863D528D404D00076B21D /* MainViewModel.swift */; };
 		048863D828D405070076B21D /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048863D728D405070076B21D /* Player.swift */; };
+		04E0392128D40A3D000672FA /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0392028D40A3D000672FA /* CustomTextField.swift */; };
+		04E0392428D40BF5000672FA /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0392328D40BF5000672FA /* PrimaryButton.swift */; };
+		04E0392728D40E96000672FA /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0392628D40E96000672FA /* PlayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		048863D328D404480076B21D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		048863D528D404D00076B21D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		048863D728D405070076B21D /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		04E0392028D40A3D000672FA /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		04E0392328D40BF5000672FA /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		04E0392628D40E96000672FA /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +84,10 @@
 		048863CF28D403E80076B21D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				048863C328D402FD0076B21D /* ContentView.swift */,
-				048863D328D404480076B21D /* MainView.swift */,
+				04E0392528D40E83000672FA /* PlayerView */,
+				04E0392228D40BE4000672FA /* Buttons */,
+				048863DA28D4097F0076B21D /* TextFields */,
+				048863D928D4096D0076B21D /* Screens */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -106,6 +114,39 @@
 				048863C128D402FD0076B21D /* Squid_GameApp.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		048863D928D4096D0076B21D /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				048863D328D404480076B21D /* MainView.swift */,
+				048863C328D402FD0076B21D /* ContentView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		048863DA28D4097F0076B21D /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				04E0392028D40A3D000672FA /* CustomTextField.swift */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
+		04E0392228D40BE4000672FA /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				04E0392328D40BF5000672FA /* PrimaryButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		04E0392528D40E83000672FA /* PlayerView */ = {
+			isa = PBXGroup;
+			children = (
+				04E0392628D40E96000672FA /* PlayerView.swift */,
+			);
+			path = PlayerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,7 +221,10 @@
 			files = (
 				048863C428D402FD0076B21D /* ContentView.swift in Sources */,
 				048863D428D404480076B21D /* MainView.swift in Sources */,
+				04E0392128D40A3D000672FA /* CustomTextField.swift in Sources */,
+				04E0392728D40E96000672FA /* PlayerView.swift in Sources */,
 				048863C228D402FD0076B21D /* Squid_GameApp.swift in Sources */,
+				04E0392428D40BF5000672FA /* PrimaryButton.swift in Sources */,
 				048863D828D405070076B21D /* Player.swift in Sources */,
 				048863D628D404D00076B21D /* MainViewModel.swift in Sources */,
 			);
@@ -319,6 +363,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -348,6 +393,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
