@@ -17,6 +17,8 @@
 		04E0392128D40A3D000672FA /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0392028D40A3D000672FA /* CustomTextField.swift */; };
 		04E0392428D40BF5000672FA /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0392328D40BF5000672FA /* PrimaryButton.swift */; };
 		04E0392728D40E96000672FA /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0392628D40E96000672FA /* PlayerView.swift */; };
+		04E0392928D415C6000672FA /* PlayersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0392828D415C6000672FA /* PlayersListView.swift */; };
+		04E0392B28D4162A000672FA /* PlayersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0392A28D4162A000672FA /* PlayersListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		04E0392028D40A3D000672FA /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		04E0392328D40BF5000672FA /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		04E0392628D40E96000672FA /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		04E0392828D415C6000672FA /* PlayersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersListView.swift; sourceTree = "<group>"; };
+		04E0392A28D4162A000672FA /* PlayersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				048863D528D404D00076B21D /* MainViewModel.swift */,
+				04E0392A28D4162A000672FA /* PlayersListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 			children = (
 				048863D328D404480076B21D /* MainView.swift */,
 				048863C328D402FD0076B21D /* ContentView.swift */,
+				04E0392828D415C6000672FA /* PlayersListView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -222,6 +228,8 @@
 				048863C428D402FD0076B21D /* ContentView.swift in Sources */,
 				048863D428D404480076B21D /* MainView.swift in Sources */,
 				04E0392128D40A3D000672FA /* CustomTextField.swift in Sources */,
+				04E0392B28D4162A000672FA /* PlayersListViewModel.swift in Sources */,
+				04E0392928D415C6000672FA /* PlayersListView.swift in Sources */,
 				04E0392728D40E96000672FA /* PlayerView.swift in Sources */,
 				048863C228D402FD0076B21D /* Squid_GameApp.swift in Sources */,
 				04E0392428D40BF5000672FA /* PrimaryButton.swift in Sources */,

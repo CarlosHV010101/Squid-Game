@@ -19,6 +19,7 @@ struct MainView: View {
         VStack(spacing: 20) {
             
             VStack(spacing: 20) {
+                
                 Text("Squid Game")
                     .font(.title)
                     .bold()
@@ -58,9 +59,20 @@ struct MainView: View {
             }
             
             PrimaryButton(
-                text: "Comenzar partida",
+                text: "Revolver jugadores",
                 action: viewModel.startGame
             )
+            
+            NavigationLink(
+                destination: PlayersListView(
+                    viewModel: PlayersListViewModel(
+                        players: viewModel.players)
+                )
+                .navigationBarHidden(true),
+                isActive: $viewModel.goToPlayersList) {
+                    EmptyView()
+                }
+                .hidden()
             
         }
         .padding(.vertical)
