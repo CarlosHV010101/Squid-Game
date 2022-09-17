@@ -28,6 +28,8 @@
 		04E0393D28D4F4B4000672FA /* GlassPanelButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0393C28D4F4B4000672FA /* GlassPanelButtonView.swift */; };
 		04E0393F28D50ED5000672FA /* GameMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0393E28D50ED5000672FA /* GameMapView.swift */; };
 		04E0394128D50FEB000672FA /* GlassPanelPairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0394028D50FEB000672FA /* GlassPanelPairView.swift */; };
+		04E0394328D648C7000672FA /* LoserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0394228D648C7000672FA /* LoserView.swift */; };
+		04E0394528D64D15000672FA /* WinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0394428D64D15000672FA /* WinnerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		04E0393C28D4F4B4000672FA /* GlassPanelButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassPanelButtonView.swift; sourceTree = "<group>"; };
 		04E0393E28D50ED5000672FA /* GameMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMapView.swift; sourceTree = "<group>"; };
 		04E0394028D50FEB000672FA /* GlassPanelPairView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassPanelPairView.swift; sourceTree = "<group>"; };
+		04E0394228D648C7000672FA /* LoserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoserView.swift; sourceTree = "<group>"; };
+		04E0394428D64D15000672FA /* WinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +206,8 @@
 				04E0393A28D4F3B9000672FA /* GameOptionsView.swift */,
 				04E0393C28D4F4B4000672FA /* GlassPanelButtonView.swift */,
 				04E0394028D50FEB000672FA /* GlassPanelPairView.swift */,
+				04E0394228D648C7000672FA /* LoserView.swift */,
+				04E0394428D64D15000672FA /* WinnerView.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -277,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				048863C428D402FD0076B21D /* ContentView.swift in Sources */,
+				04E0394528D64D15000672FA /* WinnerView.swift in Sources */,
 				048863D428D404480076B21D /* MainView.swift in Sources */,
 				04E0393B28D4F3B9000672FA /* GameOptionsView.swift in Sources */,
 				04E0392128D40A3D000672FA /* CustomTextField.swift in Sources */,
@@ -286,6 +293,7 @@
 				04E0392928D415C6000672FA /* PlayersListView.swift in Sources */,
 				04E0392728D40E96000672FA /* PlayerView.swift in Sources */,
 				04E0393028D41D92000672FA /* GlassPanel.swift in Sources */,
+				04E0394328D648C7000672FA /* LoserView.swift in Sources */,
 				04E0393F28D50ED5000672FA /* GameMapView.swift in Sources */,
 				048863C228D402FD0076B21D /* Squid_GameApp.swift in Sources */,
 				04E0394128D50FEB000672FA /* GlassPanelPairView.swift in Sources */,

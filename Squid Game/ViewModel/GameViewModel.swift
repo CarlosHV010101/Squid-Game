@@ -22,10 +22,10 @@ final class GameViewModel: ObservableObject {
     @Published var currentPanelIndex: Int = 0
     
     ///Bandera para mostrar el modal de ganadores
-    @Published var showWinnerModal: Bool = false
+    @Published var showWinnerView: Bool = false
     
     ///Bandera para mostrar el modal de perdedores
-    @Published var showLoserModal: Bool = false
+    @Published var showLoserView: Bool = false
     
     ///Arreglo para almacenar la lista de ganadores del juego
     @Published var winners: [Player] = []
@@ -112,14 +112,14 @@ final class GameViewModel: ObservableObject {
     private func shouldContinueGame() -> Bool {
         
         if players.allSatisfy({ $0.isDead }) {
-            self.showLoserModal = true
+            self.showLoserView = true
             self.showGlassPanelOptions = false
             return false
         }
         
         if currentPanelIndex == glassPanels.count - 1 {
             self.winners = players.filter { !$0.isDead }
-            self.showWinnerModal = true
+            self.showWinnerView = true
             self.showGlassPanelOptions = false
             winners.forEach { winner in
                 debugPrint("Winner", winner.name)

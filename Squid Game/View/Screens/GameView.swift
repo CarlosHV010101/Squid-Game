@@ -33,7 +33,13 @@ struct GameView: View {
          
             Spacer()
             
-            GameMapView(glassPanels: $viewModel.glassPanels, currentIndex: viewModel.currentPanelIndex)
+            if viewModel.showWinnerView {
+                WinnerView(players: $viewModel.winners, action: {})
+            } else if viewModel.showLoserView {
+                LoserView(action: {})
+            } else {
+                GameMapView(glassPanels: $viewModel.glassPanels, currentIndex: viewModel.currentPanelIndex)
+            }
             
             Spacer()
             
