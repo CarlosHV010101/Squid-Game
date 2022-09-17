@@ -9,7 +9,10 @@ import Foundation
 
 final class PlayersListViewModel: ObservableObject {
     
+    ///Arreglo con los jugadores registrados
     @Published var players: [Player]
+    
+    ///Bandera para ir a la pantalla de juego
     @Published var goToGame: Bool = false
     
     init(players: [Player]) {
@@ -17,6 +20,7 @@ final class PlayersListViewModel: ObservableObject {
         self.shufflePlayers()
     }
     
+    ///Revuelve todos los jugadores de forma aleatoria
     func shufflePlayers() {
         self.players.shuffle()
     }
