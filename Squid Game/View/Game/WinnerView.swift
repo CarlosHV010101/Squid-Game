@@ -28,7 +28,9 @@ struct WinnerView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(players, id: \.id) { player in
-                        Text(player.name)
+                        PlayerView(name: player.name,
+                                   image: player.image
+                        )
                     }
                 }
             }

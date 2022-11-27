@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042FE4E0290031F3005F3B9E /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042FE4DF290031F3005F3B9E /* ImagePickerView.swift */; };
 		048863C228D402FD0076B21D /* Squid_GameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048863C128D402FD0076B21D /* Squid_GameApp.swift */; };
 		048863C428D402FD0076B21D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048863C328D402FD0076B21D /* ContentView.swift */; };
 		048863C628D403020076B21D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048863C528D403020076B21D /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 		048863D428D404480076B21D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048863D328D404480076B21D /* MainView.swift */; };
 		048863D628D404D00076B21D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048863D528D404D00076B21D /* MainViewModel.swift */; };
 		048863D828D405070076B21D /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048863D728D405070076B21D /* Player.swift */; };
+		0489D57F293327130039A10C /* NavigationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489D57E293327130039A10C /* NavigationUtil.swift */; };
 		04E0392128D40A3D000672FA /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0392028D40A3D000672FA /* CustomTextField.swift */; };
 		04E0392428D40BF5000672FA /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0392328D40BF5000672FA /* PrimaryButton.swift */; };
 		04E0392728D40E96000672FA /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0392628D40E96000672FA /* PlayerView.swift */; };
@@ -30,9 +32,12 @@
 		04E0394128D50FEB000672FA /* GlassPanelPairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0394028D50FEB000672FA /* GlassPanelPairView.swift */; };
 		04E0394328D648C7000672FA /* LoserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0394228D648C7000672FA /* LoserView.swift */; };
 		04E0394528D64D15000672FA /* WinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0394428D64D15000672FA /* WinnerView.swift */; };
+		04E0394728D677EC000672FA /* GamePlayerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0394628D677EC000672FA /* GamePlayerListView.swift */; };
+		04E0394928D6805F000672FA /* PlayerRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0394828D6805F000672FA /* PlayerRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		042FE4DF290031F3005F3B9E /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		048863BE28D402FD0076B21D /* Squid Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Squid Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		048863C128D402FD0076B21D /* Squid_GameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Squid_GameApp.swift; sourceTree = "<group>"; };
 		048863C328D402FD0076B21D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,6 +46,7 @@
 		048863D328D404480076B21D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		048863D528D404D00076B21D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		048863D728D405070076B21D /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		0489D57E293327130039A10C /* NavigationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUtil.swift; sourceTree = "<group>"; };
 		04E0392028D40A3D000672FA /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		04E0392328D40BF5000672FA /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		04E0392628D40E96000672FA /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
@@ -57,6 +63,8 @@
 		04E0394028D50FEB000672FA /* GlassPanelPairView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassPanelPairView.swift; sourceTree = "<group>"; };
 		04E0394228D648C7000672FA /* LoserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoserView.swift; sourceTree = "<group>"; };
 		04E0394428D64D15000672FA /* WinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnerView.swift; sourceTree = "<group>"; };
+		04E0394628D677EC000672FA /* GamePlayerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayerListView.swift; sourceTree = "<group>"; };
+		04E0394828D6805F000672FA /* PlayerRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		042FE4DE290031E3005F3B9E /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				042FE4DF290031F3005F3B9E /* ImagePickerView.swift */,
+			);
+			path = ImagePicker;
+			sourceTree = "<group>";
+		};
 		048863B528D402FD0076B21D = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +105,7 @@
 		048863C028D402FD0076B21D /* Squid Game */ = {
 			isa = PBXGroup;
 			children = (
+				0489D57D293327040039A10C /* Utils */,
 				04E0392E28D41D7D000672FA /* Enumerations */,
 				048863D228D4042E0076B21D /* App */,
 				048863D128D403FD0076B21D /* Model */,
@@ -111,6 +128,7 @@
 		048863CF28D403E80076B21D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				042FE4DE290031E3005F3B9E /* ImagePicker */,
 				04E0393728D4F280000672FA /* Game */,
 				04E0393328D4F131000672FA /* ToolBar */,
 				04E0392528D40E83000672FA /* PlayerView */,
@@ -154,6 +172,7 @@
 				048863C328D402FD0076B21D /* ContentView.swift */,
 				04E0392828D415C6000672FA /* PlayersListView.swift */,
 				04E0393128D4F105000672FA /* GameView.swift */,
+				04E0394628D677EC000672FA /* GamePlayerListView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -164,6 +183,14 @@
 				04E0392028D40A3D000672FA /* CustomTextField.swift */,
 			);
 			path = TextFields;
+			sourceTree = "<group>";
+		};
+		0489D57D293327040039A10C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0489D57E293327130039A10C /* NavigationUtil.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		04E0392228D40BE4000672FA /* Buttons */ = {
@@ -178,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				04E0392628D40E96000672FA /* PlayerView.swift */,
+				04E0394828D6805F000672FA /* PlayerRowView.swift */,
 			);
 			path = PlayerView;
 			sourceTree = "<group>";
@@ -286,17 +314,21 @@
 				04E0394528D64D15000672FA /* WinnerView.swift in Sources */,
 				048863D428D404480076B21D /* MainView.swift in Sources */,
 				04E0393B28D4F3B9000672FA /* GameOptionsView.swift in Sources */,
+				042FE4E0290031F3005F3B9E /* ImagePickerView.swift in Sources */,
 				04E0392128D40A3D000672FA /* CustomTextField.swift in Sources */,
+				04E0394728D677EC000672FA /* GamePlayerListView.swift in Sources */,
 				04E0392D28D41D49000672FA /* GameViewModel.swift in Sources */,
 				04E0393928D4F2A0000672FA /* CurrentPlayerView.swift in Sources */,
 				04E0392B28D4162A000672FA /* PlayersListViewModel.swift in Sources */,
 				04E0392928D415C6000672FA /* PlayersListView.swift in Sources */,
 				04E0392728D40E96000672FA /* PlayerView.swift in Sources */,
+				0489D57F293327130039A10C /* NavigationUtil.swift in Sources */,
 				04E0393028D41D92000672FA /* GlassPanel.swift in Sources */,
 				04E0394328D648C7000672FA /* LoserView.swift in Sources */,
 				04E0393F28D50ED5000672FA /* GameMapView.swift in Sources */,
 				048863C228D402FD0076B21D /* Squid_GameApp.swift in Sources */,
 				04E0394128D50FEB000672FA /* GlassPanelPairView.swift in Sources */,
+				04E0394928D6805F000672FA /* PlayerRowView.swift in Sources */,
 				04E0392428D40BF5000672FA /* PrimaryButton.swift in Sources */,
 				04E0393D28D4F4B4000672FA /* GlassPanelButtonView.swift in Sources */,
 				04E0393528D4F140000672FA /* GameToolBarView.swift in Sources */,
@@ -434,6 +466,7 @@
 				DEVELOPMENT_TEAM = BJYRRMLA6N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Necesitamos accesso a tu cámara";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -464,6 +497,7 @@
 				DEVELOPMENT_TEAM = BJYRRMLA6N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Necesitamos accesso a tu cámara";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

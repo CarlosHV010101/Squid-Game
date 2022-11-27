@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 final class MainViewModel: ObservableObject {
     
@@ -14,6 +15,9 @@ final class MainViewModel: ObservableObject {
     
     ///Texto que utiliza el TextField para los jugadores
     @Published var playerName: String = ""
+    
+    ///Imagen del usuario
+    @Published var playerImage: UIImage?
     
     ///Bandera que muestra el error en caso de existir
     @Published var showError: Bool = false
@@ -24,6 +28,12 @@ final class MainViewModel: ObservableObject {
     ///Bandera para mostrar la lista de jugadores
     @Published var goToPlayersList: Bool = false
     
+    ///Bandera para mostrar una alerta
+    @Published var presentAlert: Bool = false
+    
+    ///Bandera para mostrar el ImagePicker
+    @Published var showSheet: Bool = false
+    
     ///Crea y añade un jugador al arreglo de jugadores
     func addPlayer() {
         self.resetErrors()
@@ -33,8 +43,21 @@ final class MainViewModel: ObservableObject {
             return
         }
         
-        self.players.append(Player(name: playerName))
+        guard let playerImage = playerImage else {
+            self.showError = true
+            self.error = "Tome una foto del jugador"
+            return
+        }
+        
+        
+        self.players.append(
+            Player(
+                name: playerName,
+                image: playerImage
+            )
+        )
         self.playerName = ""
+        self.playerImage = nil
     }
     
     ///Evalúa si por lo menos hay 2 jugadores y pasa a la siguiente pantalla
@@ -53,5 +76,10 @@ final class MainViewModel: ObservableObject {
     private func resetErrors() {
         self.showError = false
         self.error = ""
+    }
+    
+    ///Deja vacio el arreglo de jugadores
+    func resetPlayers() {
+        self.players.removeAll()
     }
 }

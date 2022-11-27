@@ -28,12 +28,28 @@ struct MainView: View {
                 Text("Ingrese el nombre de un jugador")
                     .foregroundColor(.white)
                 
-                CustomTextField(
-                    text: $viewModel.playerName,
-                    placeholder: "Nombre del jugador:",
-                    onCommit: viewModel.addPlayer
-                )
+                
+                HStack {
+                    CustomTextField(
+                        text: $viewModel.playerName,
+                        placeholder: "Nombre del jugador:",
+                        onCommit: viewModel.addPlayer
+                    )
+                    
+                    if viewModel.playerImage != nil {
+                        Image(uiImage: viewModel.playerImage!)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 30, height: 30, alignment: .center)
+                    }
+                    
+                }
                 .padding(.horizontal, 20)
+                
+                PrimaryButton(
+                    text: "Tomar foto",
+                    action: { viewModel.showSheet = true }
+                )
                 
                 PrimaryButton(
                     text: "Añadir jugador",
@@ -46,21 +62,22 @@ struct MainView: View {
                 }
             }
             
-            VStack {
-                Spacer()
+            ScrollView(.horizontal, showsIndicators: false) {
                 
-                ForEach(viewModel.players, id: \.id) { player in
-                    HStack {
-                        Text(player.name)
+                HStack {
+                    ForEach(viewModel.players, id: \.id) { player in
+                        PlayerView(
+                            name: player.name,
+                            image: player.image
+                        )
                     }
                 }
-                
-                Spacer()
             }
+            .padding(.leading)
             
             PrimaryButton(
                 text: "Revolver jugadores",
-                action: viewModel.registerPlayers
+                action: { viewModel.presentAlert = true }
             )
             
             NavigationLink(
@@ -77,6 +94,19 @@ struct MainView: View {
         }
         .padding(.vertical)
         .background(Color.black)
+        .alert(isPresented: $viewModel.presentAlert) {
+            Alert(
+                title: Text("¿Quieres registrar los jugadores?"),
+                primaryButton: .default(Text("Si"), action: viewModel.registerPlayers),
+                secondaryButton: .cancel()
+            )
+        }
+        .sheet(isPresented: $viewModel.showSheet) {
+            ImagePicker(sourceType: .camera, selectedImage: $viewModel.playerImage)
+        }
+        .onAppear {
+            self.viewModel.resetPlayers()
+        }
     }
 }
 

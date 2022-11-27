@@ -16,7 +16,7 @@ struct LoserView: View {
     }
     
     var body: some View {
-        VStack {
+        VStack(spacing: 20) {
             
             Text("¡Derrota!")
                 .font(.title3)

@@ -35,6 +35,11 @@ struct PlayersListView: View {
                                 Text("\(index + 1).")
                                     .bold()
                                 
+                                Image(uiImage: viewModel.players[index].image)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 30, height: 30, alignment: .center)
+                                
                                 Text(viewModel.players[index].name)
                                     .bold()
                                 

@@ -10,9 +10,11 @@ import SwiftUI
 struct CurrentPlayerView: View {
     
     private let name: String
+    private let image: UIImage
     
-    init(name: String) {
+    init(name: String, image: UIImage) {
         self.name = name
+        self.image = image
     }
     
     var body: some View {
@@ -20,6 +22,11 @@ struct CurrentPlayerView: View {
             
             Text("Jugador actual:")
                 .font(.title)
+            
+            Image(uiImage: image)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 60, height: 60, alignment: .center)
             
             Text(name)
                 .font(.title2)
@@ -29,6 +36,6 @@ struct CurrentPlayerView: View {
 
 struct CurrentPlayerView_Previews: PreviewProvider {
     static var previews: some View {
-        CurrentPlayerView(name: "Carlos")
+        CurrentPlayerView(name: "Carlos", image: UIImage())
     }
 }

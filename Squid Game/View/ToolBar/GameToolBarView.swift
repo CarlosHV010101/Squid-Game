@@ -21,11 +21,19 @@ struct GameToolBarView: View {
     var body: some View {
         HStack {
             
-            
+            Button(action: {
+                leftIconAction()
+            }) {
+                Text("Mostrar jugadores")
+            }
             
             Spacer()
             
-            
+            Button(action: {
+                rightIconAction()
+            }) {
+                Text("Terminar partida")
+            }
         }
     }
 }

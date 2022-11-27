@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Player {
     
@@ -13,8 +14,10 @@ class Player {
     let name: String
     var isDead: Bool = false
     var currentSelection: GlassPanel?
+    var image: UIImage
     
-    init(name: String) {
+    init(name: String, image: UIImage) {
         self.name = name
+        self.image = image
     }
 }

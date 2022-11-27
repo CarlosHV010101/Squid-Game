@@ -10,24 +10,30 @@ import SwiftUI
 struct PlayerView: View {
     
     private let name: String
+    private let image: UIImage
     
-    init(name: String) {
+    init(name: String, image: UIImage) {
         self.name = name
+        self.image = image
     }
     
     var body: some View {
-        Text(name)
-            .foregroundColor(Color.black)
-            .padding(20)
-            .overlay(
-                Circle()
-                    .stroke(lineWidth: 2)
-            )
+        
+        VStack {
+            
+            Image(uiImage: image)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 30, height: 30, alignment: .center)
+                
+            Text(name)
+                .foregroundColor(.white)
+        }
     }
 }
 
 struct PlayerView_Previews: PreviewProvider {
     static var previews: some View {
-        PlayerView(name: "Carlos")
+        PlayerView(name: "Carlos", image: UIImage())
     }
 }

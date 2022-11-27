@@ -82,7 +82,10 @@ final class GameViewModel: ObservableObject {
         if !isValidSelection() {
             self.killCurrentPlayer()
             self.goToNextPlayer()
-            self.showNextPlayerAlert = true
+            
+            if currentPlayer != nil {
+                self.showNextPlayerAlert = true
+            }
         }
         
         if shouldContinueGame() {
@@ -121,9 +124,6 @@ final class GameViewModel: ObservableObject {
             self.winners = players.filter { !$0.isDead }
             self.showWinnerView = true
             self.showGlassPanelOptions = false
-            winners.forEach { winner in
-                debugPrint("Winner", winner.name)
-            }
             return false
         }
         
